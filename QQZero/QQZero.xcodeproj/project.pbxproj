@@ -30,12 +30,23 @@
 		C0FD037E1F24600700927AAC /* MGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD036D1F24600700927AAC /* MGButton.swift */; };
 		C0FD037F1F24600700927AAC /* MoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD036E1F24600700927AAC /* MoreButton.swift */; };
 		C0FD03801F24600700927AAC /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD036F1F24600700927AAC /* TitleButton.swift */; };
-		C0FD03821F24622100927AAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03811F24622100927AAC /* HomeViewController.swift */; };
 		C0FD03851F2464D600927AAC /* MGDockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03841F2464D600927AAC /* MGDockView.swift */; };
 		C0FD03871F24722E00927AAC /* MGIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03861F24722E00927AAC /* MGIconView.swift */; };
 		C0FD03891F24723E00927AAC /* MGTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03881F24723E00927AAC /* MGTabBar.swift */; };
 		C0FD038B1F24724800927AAC /* MGToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD038A1F24724800927AAC /* MGToolBar.swift */; };
 		C0FD038D1F247C9300927AAC /* MGTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD038C1F247C9300927AAC /* MGTabBarButton.swift */; };
+		C0FD03901F2493AF00927AAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD038F1F2493AF00927AAC /* HomeViewController.swift */; };
+		C0FD03941F2493FB00927AAC /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FD03911F2493FB00927AAC /* Mine.storyboard */; };
+		C0FD03951F2493FB00927AAC /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03921F2493FB00927AAC /* MineViewController.swift */; };
+		C0FD03961F2493FB00927AAC /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03931F2493FB00927AAC /* QRCodeViewController.swift */; };
+		C0FD039A1F24952A00927AAC /* SBTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03981F24952A00927AAC /* SBTools.swift */; };
+		C0FD039B1F24952A00927AAC /* SaveTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03991F24952A00927AAC /* SaveTools.swift */; };
+		C0FD039F1F249A9A00927AAC /* MGWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD039E1F249A9900927AAC /* MGWelcomeViewController.swift */; };
+		C0FD03A11F249AD000927AAC /* MGWelcomeAVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD03A01F249AD000927AAC /* MGWelcomeAVPlayerViewController.swift */; };
+		C0FD03A61F249BC700927AAC /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C0FD03A21F249BC700927AAC /* login_video.mp4 */; };
+		C0FD03A71F249BC700927AAC /* opening_long.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C0FD03A31F249BC700927AAC /* opening_long.mp4 */; };
+		C0FD03A81F249BC700927AAC /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C0FD03A41F249BC700927AAC /* loginmovie.mp4 */; };
+		C0FD03A91F249BC700927AAC /* qidong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C0FD03A51F249BC700927AAC /* qidong.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,12 +76,23 @@
 		C0FD036D1F24600700927AAC /* MGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGButton.swift; sourceTree = "<group>"; };
 		C0FD036E1F24600700927AAC /* MoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreButton.swift; sourceTree = "<group>"; };
 		C0FD036F1F24600700927AAC /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
-		C0FD03811F24622100927AAC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0FD03841F2464D600927AAC /* MGDockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDockView.swift; sourceTree = "<group>"; };
 		C0FD03861F24722E00927AAC /* MGIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGIconView.swift; sourceTree = "<group>"; };
 		C0FD03881F24723E00927AAC /* MGTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGTabBar.swift; sourceTree = "<group>"; };
 		C0FD038A1F24724800927AAC /* MGToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGToolBar.swift; sourceTree = "<group>"; };
 		C0FD038C1F247C9300927AAC /* MGTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGTabBarButton.swift; sourceTree = "<group>"; };
+		C0FD038F1F2493AF00927AAC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C0FD03911F2493FB00927AAC /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		C0FD03921F2493FB00927AAC /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		C0FD03931F2493FB00927AAC /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		C0FD03981F24952A00927AAC /* SBTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBTools.swift; sourceTree = "<group>"; };
+		C0FD03991F24952A00927AAC /* SaveTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTools.swift; sourceTree = "<group>"; };
+		C0FD039E1F249A9900927AAC /* MGWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGWelcomeViewController.swift; sourceTree = "<group>"; };
+		C0FD03A01F249AD000927AAC /* MGWelcomeAVPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGWelcomeAVPlayerViewController.swift; sourceTree = "<group>"; };
+		C0FD03A21F249BC700927AAC /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
+		C0FD03A31F249BC700927AAC /* opening_long.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = opening_long.mp4; sourceTree = "<group>"; };
+		C0FD03A41F249BC700927AAC /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
+		C0FD03A51F249BC700927AAC /* qidong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qidong.mp4; sourceTree = "<group>"; };
 		C9D3939968C67F155513D2F7 /* Pods-QQZero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQZero.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQZero/Pods-QQZero.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,14 +147,19 @@
 			isa = PBXGroup;
 			children = (
 				C0FD034A1F245E6500927AAC /* AppDelegate.swift */,
-				C0FD03831F2464C200927AAC /* View */,
 				C0FD034C1F245E6500927AAC /* LoginViewController.swift */,
-				C0FD03811F24622100927AAC /* HomeViewController.swift */,
+				C0FD038E1F2493AF00927AAC /* Controller  */,
+				C0FD03831F2464C200927AAC /* View */,
 				C0FD035C1F24600700927AAC /* Extesion */,
+				C0FD03971F24952000927AAC /* Tools */,
 				C0FD034E1F245E6500927AAC /* Main.storyboard */,
 				C0FD03511F245E6500927AAC /* Assets.xcassets */,
 				C0FD03531F245E6500927AAC /* LaunchScreen.storyboard */,
 				C0FD03561F245E6500927AAC /* Info.plist */,
+				C0FD03A21F249BC700927AAC /* login_video.mp4 */,
+				C0FD03A31F249BC700927AAC /* opening_long.mp4 */,
+				C0FD03A41F249BC700927AAC /* loginmovie.mp4 */,
+				C0FD03A51F249BC700927AAC /* qidong.mp4 */,
 			);
 			path = QQZero;
 			sourceTree = "<group>";
@@ -187,6 +214,28 @@
 				C0FD038C1F247C9300927AAC /* MGTabBarButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C0FD038E1F2493AF00927AAC /* Controller  */ = {
+			isa = PBXGroup;
+			children = (
+				C0FD038F1F2493AF00927AAC /* HomeViewController.swift */,
+				C0FD03911F2493FB00927AAC /* Mine.storyboard */,
+				C0FD03921F2493FB00927AAC /* MineViewController.swift */,
+				C0FD03931F2493FB00927AAC /* QRCodeViewController.swift */,
+				C0FD039E1F249A9900927AAC /* MGWelcomeViewController.swift */,
+				C0FD03A01F249AD000927AAC /* MGWelcomeAVPlayerViewController.swift */,
+			);
+			path = "Controller ";
+			sourceTree = "<group>";
+		};
+		C0FD03971F24952000927AAC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C0FD03981F24952A00927AAC /* SBTools.swift */,
+				C0FD03991F24952A00927AAC /* SaveTools.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +304,12 @@
 			files = (
 				C0FD03551F245E6500927AAC /* LaunchScreen.storyboard in Resources */,
 				C0FD03521F245E6500927AAC /* Assets.xcassets in Resources */,
+				C0FD03A71F249BC700927AAC /* opening_long.mp4 in Resources */,
+				C0FD03A91F249BC700927AAC /* qidong.mp4 in Resources */,
+				C0FD03A81F249BC700927AAC /* loginmovie.mp4 in Resources */,
 				C0FD03501F245E6500927AAC /* Main.storyboard in Resources */,
+				C0FD03A61F249BC700927AAC /* login_video.mp4 in Resources */,
+				C0FD03941F2493FB00927AAC /* Mine.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0FD03721F24600700927AAC /* NSObject+Extension.swift in Sources */,
+				C0FD03951F2493FB00927AAC /* MineViewController.swift in Sources */,
 				C0FD038B1F24724800927AAC /* MGToolBar.swift in Sources */,
 				C0FD037A1F24600700927AAC /* UIView+Extension.swift in Sources */,
 				C0FD037C1F24600700927AAC /* Constant.swift in Sources */,
@@ -325,7 +380,11 @@
 				C0FD03891F24723E00927AAC /* MGTabBar.swift in Sources */,
 				C0FD034B1F245E6500927AAC /* AppDelegate.swift in Sources */,
 				C0FD038D1F247C9300927AAC /* MGTabBarButton.swift in Sources */,
+				C0FD03A11F249AD000927AAC /* MGWelcomeAVPlayerViewController.swift in Sources */,
+				C0FD03901F2493AF00927AAC /* HomeViewController.swift in Sources */,
 				C0FD03731F24600700927AAC /* String+Extension.swift in Sources */,
+				C0FD039A1F24952A00927AAC /* SBTools.swift in Sources */,
+				C0FD039B1F24952A00927AAC /* SaveTools.swift in Sources */,
 				C0FD037D1F24600700927AAC /* CornersLabel.swift in Sources */,
 				C0FD03801F24600700927AAC /* TitleButton.swift in Sources */,
 				C0FD03871F24722E00927AAC /* MGIconView.swift in Sources */,
@@ -334,11 +393,12 @@
 				C0FD03791F24600700927AAC /* UILabel+Extension.swift in Sources */,
 				C0FD03851F2464D600927AAC /* MGDockView.swift in Sources */,
 				C0FD037E1F24600700927AAC /* MGButton.swift in Sources */,
-				C0FD03821F24622100927AAC /* HomeViewController.swift in Sources */,
 				C0FD03771F24600700927AAC /* UIImage+Extension.swift in Sources */,
 				C0FD03741F24600700927AAC /* UIAlertView+Extension.swift in Sources */,
+				C0FD03961F2493FB00927AAC /* QRCodeViewController.swift in Sources */,
 				C0FD037F1F24600700927AAC /* MoreButton.swift in Sources */,
 				C0FD03711F24600700927AAC /* CALayer+Extension.swift in Sources */,
+				C0FD039F1F249A9A00927AAC /* MGWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

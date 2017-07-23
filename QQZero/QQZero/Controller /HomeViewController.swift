@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     
     fileprivate lazy var dockView: MGDockView = { [unowned self] in
         let dock = MGDockView(frame: .zero)
-        dock.backgroundColor = UIColor.red
         return dock
     }()
     /** 正在显示的子控制器 */
@@ -22,14 +21,20 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setUpMainView()
-
-//        viewWillTransition(to: MGScreenBounds.size, with: UIViewControllerTransitionCoordinator)
+        
+        setUpNotification()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewWillTransition(to: MGScreenBounds.size, with: self.transitionCoordinator!)
+    }
+    
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         viewWillTransition(to: MGScreenBounds.size, with: coordinator)
@@ -38,6 +43,7 @@ class HomeViewController: UIViewController {
     /// size : 屏幕翻转后的新的尺寸;
     /// coordinator : 屏幕翻转过程中的一些信息,比如翻转时间等;
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         let orient = UIApplication.shared.statusBarOrientation
         if orient.isLandscape {
             self.dockView.mg_width = MGDockPW
@@ -46,36 +52,33 @@ class HomeViewController: UIViewController {
             self.dockView.mg_width = MGDockLW
             self.dockView.mg_height = size.height
         }
-
-        super.viewWillTransition(to: size, with: coordinator)
     }
 }
 
 // MARK: - setUpMainView
 extension HomeViewController {
     fileprivate func setUpMainView() {
-        self.view.backgroundColor = UIColor(r: 55, g: 55, b: 55)
+        self.view.backgroundColor = UIColor(r: 200, g: 200, b: 200)
         
         self.view.addSubview(dockView)
         // 初始化子控制器
-//        setupChildVcs()
+        setupChildVcs()
     }
     
     /**
      *  初始化子控制器
      */
     fileprivate func setupChildVcs() {
-        for _ in stride(from: 0, through: 6, by: 1) {
+        for _ in stride(from: 0, through: 2, by: 1) {
             let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.randomColor()
             self.addChildViewController(vc)
-            self.view.addSubview(vc.view)
-            vc.view.snp.makeConstraints({ (make) in
-                make.top.bottom.right.equalToSuperview()
-                make.left.equalTo(self.dockView.snp.right)
-            })
+            vc.view.backgroundColor = UIColor.randomColor()
+            
         }
-        switchChildVc(index: 0)
+        self.addChildViewController(MGWelcomeViewController())
+        self.addChildViewController(MGWelcomeAVPlayerViewController())
+        self.addChildViewController(SBTools.loadControllerFromSB("Mine"))
+        switchChildVc(0)
     }
     
     /**
@@ -83,7 +86,7 @@ extension HomeViewController {
      *
      *  @param index 最新子控制器的索引
      */
-    fileprivate func switchChildVc(index: Int) {
+    fileprivate func switchChildVc(_ index: Int) {
         // 切换子控制器
         // 移除当前正在显示的子控制器
         self.showingChildVc?.view.removeFromSuperview()
@@ -92,5 +95,19 @@ extension HomeViewController {
         let newChildVc = self.childViewControllers[index];
         self.view.addSubview(newChildVc.view)
         self.showingChildVc = newChildVc;
+        self.showingChildVc!.view.snp.makeConstraints({ (make) in
+            make.top.bottom.right.equalToSuperview()
+            make.left.equalTo(self.dockView.snp.right)
+        })
+    }
+    
+    // 通知
+    fileprivate func setUpNotification() {
+        MGNotificationCenter.addObserver(self, selector: #selector(tabBarDidSelect(_:)), name: NSNotification.Name(MGTabBarDidSelectNotification), object: nil)
+    }
+    
+    @objc fileprivate func tabBarDidSelect(_ noti: NSNotification) {
+        guard let index: Int = noti.userInfo?[MGTabBarSelectIndex] as? Int else { return }
+        switchChildVc(index)
     }
 }

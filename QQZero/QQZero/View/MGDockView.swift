@@ -16,7 +16,7 @@ class MGDockView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        backgroundColor = UIColor(r: 150, g: 150, b: 150)
         setUpUI()
     }
     
@@ -37,24 +37,26 @@ class MGDockView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let count = CGFloat(self.toolBar.subviews.count)
-        self.toolBar.mg_width = self.mg_width;
-        self.tabBar.mg_width = self.mg_width;
-        self.tabBar.mg_height = count * MGDockPW;
         // 屏幕方向管理者
         let MGOrient = UIApplication.shared.statusBarOrientation
+        
+        self.toolBar.mg_width = self.mg_width;
+        self.tabBar.mg_width = self.mg_width;
+        self.tabBar.mg_height = CGFloat(self.tabBar.subviews.count) * MGDockPW;
+        
+        let count = CGFloat(self.toolBar.subviews.count)
         if MGOrient.isLandscape {
             self.toolBar.mg_height = self.mg_width / count
             
             self.iconView.mg_width = self.mg_width * 0.4;
             self.iconView.mg_height = self.iconView.mg_width + 40;
             self.iconView.mg_x = (self.mg_width - self.iconView.mg_width) * 0.5;
-            self.iconView.mg_y = 70;
+            self.iconView.mg_y = 100;
         }else {
             self.toolBar.mg_height = self.mg_width * count
             
             self.iconView.mg_x = 5;
-            self.iconView.mg_y = 50;
+            self.iconView.mg_y = 100;
             self.iconView.mg_width = self.mg_width - 2 * self.iconView.mg_x;
             self.iconView.mg_height = self.iconView.mg_width;
         }

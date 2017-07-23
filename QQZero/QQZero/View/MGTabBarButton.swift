@@ -13,7 +13,7 @@ class MGTabBarButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.imageView?.contentMode = .center
-        self.setBackgroundImage(#imageLiteral(resourceName: "tabbar_separate_selected_bg"), for: .highlighted)
+        self.setBackgroundImage(#imageLiteral(resourceName: "tabbar_separate_selected_bg"), for: .disabled)
         self.adjustsImageWhenDisabled = false
         self.adjustsImageWhenHighlighted = false
     }
@@ -34,7 +34,7 @@ class MGTabBarButton: UIButton {
         super.layoutSubviews()
         // 屏幕方向管理者
         let MGOrient = UIApplication.shared.statusBarOrientation
-        if (MGOrient.isLandscape) {
+        if (MGOrient.isLandscape) { // 横屏
             self.imageView?.mg_height = self.mg_height
             self.imageView?.mg_width = self.mg_width * 0.4
             self.imageView?.mg_x = 0

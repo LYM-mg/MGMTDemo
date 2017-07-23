@@ -20,6 +20,11 @@ let MGDockPW: CGFloat = 70;
 // dock横屏时的宽度
 let MGDockLW: CGFloat = MGDockPW * 3;
 
+// 屏幕竖屏时的宽度
+let  MGScreenPW: CGFloat = 768;
+// 屏幕横屏时的宽度
+let MGScreenLW: CGFloat = 1024;
+
 /// 状态栏高度20
 let MGStatusHeight: CGFloat = 20
 /// 导航栏高度64
@@ -65,13 +70,7 @@ let MGFirstResponder = MGKeyWindow?.perform(Selector(("firstResponder")))
 /// 通知中心
 let MGNotificationCenter = NotificationCenter.default
 
-// MARK:- 首页排序的通知
+// MARK:- 首页的通知
 /// 首页自定义导航栏按钮的点击
-let MGBarLeftBtnClickNoti  = "MGBarLeftBtnClickNoti"
-let KEnterHomeViewNotification = "KEnterHomeViewNotification"
-/// 通知换一换
-let KChangeanchorNotification = "KChangeanchorNotification"
-/// 通知换一换
-let KSelectedFavouriteAnchorNotification = "KSelectedFavouriteAnchorNotification"
-/// 通知#DTouch变化
-let KChange3DTouchNotification = "KChange3DTouchNotification"
+let MGTabBarDidSelectNotification = "MGTabBarDidSelectNotification"
+let MGTabBarSelectIndex = "MGTabBarSelectIndex"
