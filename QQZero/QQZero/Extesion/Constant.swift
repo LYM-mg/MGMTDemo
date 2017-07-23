@@ -15,6 +15,11 @@ let MGScreenBounds = UIScreen.main.bounds
 let MGScreenW = UIScreen.main.bounds.size.width
 let MGScreenH = UIScreen.main.bounds.size.height
 
+// dock竖屏时的宽度
+let MGDockPW: CGFloat = 70;
+// dock横屏时的宽度
+let MGDockLW: CGFloat = MGDockPW * 3;
+
 /// 状态栏高度20
 let MGStatusHeight: CGFloat = 20
 /// 导航栏高度64

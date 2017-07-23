@@ -162,16 +162,16 @@ extension UIImage {
         //创建一个基于位图的上下文
         UIGraphicsBeginImageContextWithOptions(size,false,0.0) //opaque:NO  scale:0.0
         
-        self.draw(at: size)
+        self.draw(at: CGPoint.zero)
         let logoImage = UIImage(named: logo)
         
         // logo显示在画布上
-        let width = logoImage?.size.width*0.2
-        let height = logoImage?.size.height*0.2
-        let margin = 3
+        let width = logoImage!.size.width*0.2
+        let height = logoImage!.size.height*0.2
+        let margin: CGFloat = 3
         let x = self.size.width - width - margin
         let y = self.size.height - height - margin
-        logoImage
+   
         let rect = CGRect(x: x, y: y, width: width, height: height)
         
         //绘制文字
@@ -186,21 +186,25 @@ extension UIImage {
      截屏功能
      - parameter view: 要截屏的View
      */
-    func imageWithTitle(view: UIView) -> UIImage? {
+//    func snapImage(view: UIView) -> UIImage?{
         // 延时一秒执行截屏
-        DispatchQueue.main.asyncAfter(deadline: .now()+1.0) { 
-            //创建一个基于位图的上下文
-            UIGraphicsBeginImageContextWithOptions(view.size,false,0.0) //opaque:NO  scale:0.0
-            
-            view.layer.render(in: UIGraphicsGetCurrentContext())
-            //返回绘制的新图形
-            guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
-            UIGraphicsEndImageContext()
-            // 保存到相册
-            UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil)
-            return newImage
-        }
-    }
+//        DispatchQueue.main.asyncAfter(deadline: .now()+1.0) { 
+//            //创建一个基于位图的上下文
+//            UIGraphicsBeginImageContextWithOptions(view.frame.size,false,0.0) //opaque:NO  scale:0.0
+//            
+//            view.layer.render(in: UIGraphicsGetCurrentContext()!)
+//            //返回绘制的新图形
+//            if let img = UIGraphicsGetImageFromCurrentImageContext() {
+//                // 保存到相册
+//                UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil)
+//                UIGraphicsEndImageContext()
+//                return img
+//            }
+//            UIGraphicsEndImageContext()
+//            
+//            return nil
+//        }
+//    }
 }
 
 

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QQZero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="QQZero" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,20 +30,27 @@
                                     <navigationItem title="登录" id="Dc2-6F-XJt"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_default_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="51t-Pg-UeQ">
+                                <rect key="frame" x="321" y="164" width="126" height="126"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKB-Lw-niu">
-                                <rect key="frame" x="184.5" y="114" width="400" height="30"/>
+                                <rect key="frame" x="184" y="400" width="400" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4J-xM-m7L">
-                                <rect key="frame" x="184.5" y="164" width="400" height="30"/>
+                                <rect key="frame" x="184" y="460" width="400" height="40"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.79215686269999996" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="loginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PY4-Us-jf2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IcO-P9-fdU">
-                                <rect key="frame" x="184.5" y="64" width="400" height="30"/>
+                                <rect key="frame" x="184" y="340" width="400" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nuS-rc-fyZ"/>
                                     <constraint firstAttribute="width" constant="400" id="sfq-4e-lJZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -57,12 +64,16 @@
                             <constraint firstItem="q4J-xM-m7L" firstAttribute="centerX" secondItem="ZKB-Lw-niu" secondAttribute="centerX" id="9Qi-bc-n7w"/>
                             <constraint firstItem="E98-Yo-BQH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9pF-yn-m7e"/>
                             <constraint firstItem="E98-Yo-BQH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CEG-bF-J0G"/>
-                            <constraint firstItem="IcO-P9-fdU" firstAttribute="top" secondItem="E98-Yo-BQH" secondAttribute="bottom" constant="20" id="DkQ-Fe-oYS"/>
+                            <constraint firstItem="IcO-P9-fdU" firstAttribute="top" secondItem="51t-Pg-UeQ" secondAttribute="bottom" constant="50" id="Ioe-1T-zWw"/>
+                            <constraint firstItem="q4J-xM-m7L" firstAttribute="height" secondItem="ZKB-Lw-niu" secondAttribute="height" id="Kf0-D0-7fn"/>
                             <constraint firstItem="ZKB-Lw-niu" firstAttribute="top" secondItem="IcO-P9-fdU" secondAttribute="bottom" constant="20" id="NWA-sg-yWV"/>
                             <constraint firstItem="ZKB-Lw-niu" firstAttribute="width" secondItem="IcO-P9-fdU" secondAttribute="width" id="Nxo-2W-Q4n"/>
                             <constraint firstItem="q4J-xM-m7L" firstAttribute="top" secondItem="ZKB-Lw-niu" secondAttribute="bottom" constant="20" id="P1E-68-II4"/>
                             <constraint firstItem="q4J-xM-m7L" firstAttribute="width" secondItem="ZKB-Lw-niu" secondAttribute="width" id="TwF-2W-gTW"/>
+                            <constraint firstItem="ZKB-Lw-niu" firstAttribute="height" secondItem="IcO-P9-fdU" secondAttribute="height" id="YZh-vh-pLQ"/>
                             <constraint firstItem="ZKB-Lw-niu" firstAttribute="centerX" secondItem="IcO-P9-fdU" secondAttribute="centerX" id="b6u-ER-yp7"/>
+                            <constraint firstItem="51t-Pg-UeQ" firstAttribute="top" secondItem="E98-Yo-BQH" secondAttribute="bottom" constant="120" id="lQ9-oC-pCm"/>
+                            <constraint firstItem="51t-Pg-UeQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQF-LR-gIG"/>
                             <constraint firstAttribute="trailing" secondItem="E98-Yo-BQH" secondAttribute="trailing" id="yAC-iV-sLr"/>
                         </constraints>
                     </view>
@@ -71,4 +82,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="login_default_avatar" width="126" height="126"/>
+    </resources>
 </document>
