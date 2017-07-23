@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06127EE11DAB0AFEF6DA3734 /* Pods_QQZero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34155895648939DD7DD8647A /* Pods_QQZero.framework */; };
 		C0FD034B1F245E6500927AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD034A1F245E6500927AAC /* AppDelegate.swift */; };
 		C0FD034D1F245E6500927AAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD034C1F245E6500927AAC /* ViewController.swift */; };
 		C0FD03501F245E6500927AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FD034E1F245E6500927AAC /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EB0AF59927D6B4E84556F25 /* Pods-QQZero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQZero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQZero/Pods-QQZero.debug.xcconfig"; sourceTree = "<group>"; };
+		34155895648939DD7DD8647A /* Pods_QQZero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QQZero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FD03471F245E6500927AAC /* QQZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FD034A1F245E6500927AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0FD034C1F245E6500927AAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		C0FD036D1F24600700927AAC /* MGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGButton.swift; sourceTree = "<group>"; };
 		C0FD036E1F24600700927AAC /* MoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreButton.swift; sourceTree = "<group>"; };
 		C0FD036F1F24600700927AAC /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		C9D3939968C67F155513D2F7 /* Pods-QQZero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQZero.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQZero/Pods-QQZero.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +67,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06127EE11DAB0AFEF6DA3734 /* Pods_QQZero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17CFDADA538E2F5E0C620FF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34155895648939DD7DD8647A /* Pods_QQZero.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72C13972DDB6DA021AEC0D80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EB0AF59927D6B4E84556F25 /* Pods-QQZero.debug.xcconfig */,
+				C9D3939968C67F155513D2F7 /* Pods-QQZero.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C0FD033E1F245E6500927AAC = {
 			isa = PBXGroup;
 			children = (
 				C0FD03491F245E6500927AAC /* QQZero */,
 				C0FD03481F245E6500927AAC /* Products */,
+				72C13972DDB6DA021AEC0D80 /* Pods */,
+				17CFDADA538E2F5E0C620FF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0FD03591F245E6500927AAC /* Build configuration list for PBXNativeTarget "QQZero" */;
 			buildPhases = (
+				1813BA08607307922783B1BA /* [CP] Check Pods Manifest.lock */,
 				C0FD03431F245E6500927AAC /* Sources */,
 				C0FD03441F245E6500927AAC /* Frameworks */,
 				C0FD03451F245E6500927AAC /* Resources */,
+				CF6E9F0976CD5D15D7E2F777 /* [CP] Embed Pods Frameworks */,
+				E648DCA96B3250B115D2A4F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1813BA08607307922783B1BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6E9F0976CD5D15D7E2F777 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQZero/Pods-QQZero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E648DCA96B3250B115D2A4F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQZero/Pods-QQZero-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0FD03431F245E6500927AAC /* Sources */ = {
@@ -351,6 +426,7 @@
 		};
 		C0FD035A1F245E6500927AAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB0AF59927D6B4E84556F25 /* Pods-QQZero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H54L47S422;
@@ -365,6 +441,7 @@
 		};
 		C0FD035B1F245E6500927AAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9D3939968C67F155513D2F7 /* Pods-QQZero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H54L47S422;
