@@ -19,10 +19,18 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpMainView()
         
         setUpNotification()
+        
+        //根据屏幕方向确定高度
+        let orientation = UIDevice.current.orientation
+        if (orientation == .landscapeLeft || orientation == .landscapeRight) {
+            self.dockView.frame = CGRect(origin: .zero, size: CGSize(width: MGDockLW, height: MGScreenH))
+        }else {
+            self.dockView.frame = CGRect(origin: .zero, size: CGSize(width: MGDockPW, height: MGScreenW))
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,16 +49,15 @@ class HomeViewController: UIViewController {
     }
     
     /// size : 屏幕翻转后的新的尺寸;
-    /// coordinator : 屏幕翻转过程中的一些信息,比如翻转时间等;
+    /// coordinator : 屏幕翻转过程中的一些信息,比如翻转时间等; 屏幕适配的话不适合讲MGScreenH和MGScreenW定义为let，因为旋转屏幕的话宽高每次发生互换
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        let orient = UIApplication.shared.statusBarOrientation
-        if orient.isLandscape {
-            self.dockView.mg_width = MGDockPW
-            self.dockView.mg_height = size.height
+//        let orient = UIApplication.shared.statusBarOrientation
+        let orientation = UIDevice.current.orientation
+        if (orientation == .landscapeLeft || orientation == .landscapeRight) {
+            self.dockView.frame = CGRect(origin: .zero, size: CGSize(width: MGDockLW, height: size.height))
         }else {
-            self.dockView.mg_width = MGDockLW
-            self.dockView.mg_height = size.height
+            self.dockView.frame = CGRect(origin: .zero, size: CGSize(width: MGDockPW, height: size.height))
         }
     }
 }
