@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        print("笨蛋，我喜欢你")
+        print("笨蛋，我喜欢你三生三世十里桃花")
         return true
     }
 
